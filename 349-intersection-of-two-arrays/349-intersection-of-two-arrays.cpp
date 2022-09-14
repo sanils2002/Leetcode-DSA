@@ -13,8 +13,8 @@ public:
             }
         }
         
-        set<int> s( val.begin(), val.end() );
-        val.assign( s.begin(), s.end() );
+        set<int> s(val.begin(), val.end());
+        val.assign(s.begin(), s.end());
         
         return val;
     }
