@@ -21,25 +21,25 @@ public:
         st.push(nullptr);
         st.push(root);
         
-        while(!empty(st)) {
+        while(NULL == st.empty()) {
             TreeNode* node = st.top();
             st.pop();
-            if(!node) {
+            if(NULL == node) {
                 targetSum += path.back();
                 path.pop_back();
             }
             else {
                 path.push_back(node -> val);
                 targetSum -= node -> val;
-                if(!node -> left and !node -> right and !targetSum) {
+                if(NULL == node -> left and NULL == node -> right and NULL == targetSum) {
                     ans.push_back(path);
                 }
-                if(node -> left) {
-                    st.push(nullptr);
+                if(NULL != node -> left) {
+                    st.push(NULL);
                     st.push(node -> left);
                 }
-                if(node -> right) {
-                    st.push(nullptr);
+                if(NULL != node -> right) {
+                    st.push(NULL);
                     st.push(node -> right);
                 }
             }
