@@ -1,6 +1,7 @@
 class Solution {
 public:
     int findMinMoves(vector<int>& machines) {
+        //votrubac approach
         int totalDresses = 0, n = machines.size();
         for(auto idx = 0 ; idx < n ; idx++)
             totalDresses += machines[idx];
