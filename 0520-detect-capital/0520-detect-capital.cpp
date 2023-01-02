@@ -2,8 +2,8 @@ class Solution {
 public:
     bool detectCapitalUse(string w) {
         int up = 0, low = 0;
-        for (char c : w) {
-            if (isupper(c)) {
+        for(char c : w) {
+            if(isupper(c)) {
                 up++;
             } 
             else {
