@@ -1,7 +1,7 @@
 class Solution {
 private:
-    vector<string> split(std::string str) {
-        vector<std::string> words;
+    vector<string> split(string str) {
+        vector<string> words;
         string word = "";
         
         for(char c : str) {
@@ -18,7 +18,7 @@ private:
         return words;
     }
 
-    string join(std::vector<std::string> words) {
+    string join(vector<string> words) {
         string str = "";
         for(int i = 0; i < words.size(); i++) {
             str += words[i];
