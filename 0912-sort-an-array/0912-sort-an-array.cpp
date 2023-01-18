@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> sortArray(vector<int>& nums) {
-       priority_queue<int, vector<int>, greater<int>> pq;
+       priority_queue<int, vector<int>, greater<int>> pq; //Min Heap
         for(auto &num : nums)
             pq.push(num);
         
