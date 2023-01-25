@@ -5,7 +5,7 @@ public:
         vector<int> dist2(edges.size(), -1);
 
         // perform BFS from both nodes
-        std::queue<int> q;
+        queue<int> q;
         q.push(node1);
         dist1[node1] = 0;
         while (!q.empty()) {
@@ -36,7 +36,7 @@ public:
         int minNode = -1;
         for (int i = 0; i < edges.size(); i++) {
             if (dist1[i] != -1 && dist2[i] != -1) {
-                int maxDist = std::max(dist1[i], dist2[i]);
+                int maxDist = max(dist1[i], dist2[i]);
                 if (maxDist < minDist) {
                     minDist = maxDist;
                     minNode = i;
