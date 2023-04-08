@@ -37,7 +37,7 @@ private:
     }
 public:
     Node* cloneGraph(Node* node) {
-        if(node==NULL) 
+        if(node == NULL) 
             return NULL;
         
         dfs(node);
