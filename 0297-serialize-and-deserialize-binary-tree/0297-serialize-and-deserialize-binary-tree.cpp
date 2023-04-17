@@ -12,7 +12,9 @@ private:
     TreeNode* deserializeHelper(stringstream& ss) {
         string val;
         getline(ss, val, ',');
-        if (val == "null") return nullptr;
+        if(val == "null") 
+            return nullptr;
+        
         TreeNode* node = new TreeNode(stoi(val));
         node->left = deserializeHelper(ss);
         node->right = deserializeHelper(ss);
