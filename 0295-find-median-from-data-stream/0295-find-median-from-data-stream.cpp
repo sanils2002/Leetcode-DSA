@@ -1,7 +1,7 @@
 class MedianFinder {
 private:
     priority_queue<int> maxHeap; // max heap for the smaller half
-    priority_queue<int, std::vector<int>, std::greater<int>> minHeap; // min heap for the larger half
+    priority_queue<int, vector<int>, greater<int>> minHeap; // min heap for the larger half
 public:
     MedianFinder() {
         
