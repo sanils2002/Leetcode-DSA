@@ -28,7 +28,7 @@ public:
             if(pq.size() == k) {
                 // Calculate the cost based on the current ratio and the sum of quality
                 double cost = sum * worker.first;
-                minCost = std::min(minCost, cost);
+                minCost = min(minCost, cost);
             }
         }
 
