@@ -1,24 +1,19 @@
 class Solution {
 public:
     int equalPairs(vector<vector<int>>& grid) {
-        int n = grid.size();
-        int count = 0;
-    
-        //Count occurrences of each row in the grid
-        map<vector<int>, int> rowCounts;
-        for(int i = 0; i < n; i++) {
-            rowCounts[grid[i]]++;
-        }
-    
-        // Check for equal row-column pairs
-        for(int j = 0; j < n; j++) {
-            vector<int> col;
-            for(int i = 0; i < n; i++) {
-                col.push_back(grid[i][j]);
+        map<vector<int>, int> mp;
+        for(auto &ip : grid)
+            mp[ip]++;
+        
+        int pairs = 0;
+        for(int idx = 0 ; idx < grid[0].size() ; idx++) {
+            vector<int> temp;
+            for(int jdx = 0 ; jdx < grid.size() ; jdx++) {
+                temp.push_back(grid[jdx][idx]);
             }
-            count += rowCounts[col];
+            pairs += mp[temp];
         }
-    
-        return count;
+        
+        return pairs;
     }
 };
