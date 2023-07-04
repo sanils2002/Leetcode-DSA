@@ -7,19 +7,25 @@ class Solution
 {
     public:
     //Function to count number of ways to reach the nth stair.
+     int mod = 1e9 + 7;
+     int count(int n,vector<int>&dp){
+        if(n==0){
+            return 1;
+        }
+        if(n<0){
+            return 0;
+        }
+        if(dp[n]!=-1){
+            return dp[n];
+        }
+        dp[n] = (count(n-1,dp)%mod +count(n-2,dp)%mod)%mod;
+        return dp[n];
+    }
     int countWays(int n)
     {
         // your code here
-        if(n <= 2) {
-            return n;
-        }
-        vector<long long>dp(n, 0);
-        dp[0] = 1;
-        dp[1] = 2;
-        for(int idx = 2 ; idx < n ; idx++) {
-            dp[idx] = (dp[idx-1] + dp[idx-2]) % (1000000007);
-        }
-        return dp[n-1];
+        vector<int>dp(n+1,-1);
+        return count(n,dp);
     }
 };
 
