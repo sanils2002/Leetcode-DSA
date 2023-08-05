@@ -16,8 +16,11 @@ public:
                 i++;
                 combination[i] = combination[i - 1];
             }
+            // for(auto &x: combination)
+            //     cout << x << " ";
+            // cout << "\n";
         }
-    
+
         return res;
     }
 };
