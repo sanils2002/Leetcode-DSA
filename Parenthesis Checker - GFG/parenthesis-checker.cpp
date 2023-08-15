@@ -9,28 +9,24 @@ class Solution
 {
     public:
     //Function to check if brackets are balanced or not.
-    bool ispar(string A)
+    bool ispar(string s)
     {
         // Your code here
-        stack<char> stk;
-        for(char ch : A) {
-            if(ch == '(' || ch == '{' || ch == '[') {
-                stk.push(ch);
-            } 
-            else {
-                if(stk.empty()) {
-                    return false; // No matching opening bracket found
-                }
-                char top = stk.top();
-                stk.pop();
-                
-                if((ch == ')' && top != '(') || (ch == '}' && top != '{') || (ch == ']' && top != '[')) {
-                    return false; // Mismatched closing bracket
-                }
-            }
+        stack<char> st;
+        st.push(s[0]);
+        
+        for(int idx = 1 ; idx < s.size() ; idx++) {
+            if(s[idx] == ')' && !st.empty() && st.top() == '(' ) 
+                st.pop();
+            else if(s[idx] == '}' && !st.empty() && st.top() == '{' ) 
+                st.pop();
+            else if(s[idx] == ']' && !st.empty() && st.top() == '[' ) 
+                st.pop();
+            else 
+                st.push(s[idx]);
         }
         
-        return stk.empty(); // Return 1 if the stack is empty, 0 otherwise
+        return st.empty();
     }
 
 };
