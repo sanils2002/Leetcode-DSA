@@ -6,7 +6,7 @@ private:
         int idx = 1;
         
         for(int i = n - 1 ; i >= 0 && idx >= 0 ; i--) {
-            if(num[i]==tar[idx])
+            if(num[i] == tar[idx])
                 idx--;
             else 
                 cx++;
