@@ -11,7 +11,7 @@ private:
             profit = max(-prices[ind] + solve(ind + 1, transNo - 1, prices, dp), solve(ind + 1, transNo, prices, dp));
         }
         else {//have to sell
-            profit = max(prices[ind] + solve(ind + 1, transNo - 1, prices, dp),solve(ind + 1, transNo, prices, dp));
+            profit = max(prices[ind] + solve(ind + 1, transNo - 1, prices, dp), solve(ind + 1, transNo, prices, dp));
         }
         
         return dp[ind][transNo] = profit;
