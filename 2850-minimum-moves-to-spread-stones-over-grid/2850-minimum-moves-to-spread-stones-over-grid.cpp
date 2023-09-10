@@ -4,8 +4,8 @@ private:
     void solve(vector<vector<int>> &grid , int idx , int cnt , int n , int m){
         if(idx >= 9) {
             int flag = 1;
-            for(int i = 0;i<3;i++) {
-                for(int j = 0;j<3;j++)  {
+            for(int i = 0 ; i < 3 ; i++) {
+                for(int j = 0 ; j < 3 ; j++)  {
                     if(grid[i][j] != 1) 
                         flag = false;
                 }
