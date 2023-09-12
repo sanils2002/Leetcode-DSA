@@ -25,6 +25,6 @@ public:
 		//When removed from both front and back
         int frontBack = (min(minIndex, maxIndex) + 1) + (n - max(minIndex, maxIndex));
 		
-       return min(min(front, back), frontBack);
+        return min(min(front, back), frontBack);
     }
 };
