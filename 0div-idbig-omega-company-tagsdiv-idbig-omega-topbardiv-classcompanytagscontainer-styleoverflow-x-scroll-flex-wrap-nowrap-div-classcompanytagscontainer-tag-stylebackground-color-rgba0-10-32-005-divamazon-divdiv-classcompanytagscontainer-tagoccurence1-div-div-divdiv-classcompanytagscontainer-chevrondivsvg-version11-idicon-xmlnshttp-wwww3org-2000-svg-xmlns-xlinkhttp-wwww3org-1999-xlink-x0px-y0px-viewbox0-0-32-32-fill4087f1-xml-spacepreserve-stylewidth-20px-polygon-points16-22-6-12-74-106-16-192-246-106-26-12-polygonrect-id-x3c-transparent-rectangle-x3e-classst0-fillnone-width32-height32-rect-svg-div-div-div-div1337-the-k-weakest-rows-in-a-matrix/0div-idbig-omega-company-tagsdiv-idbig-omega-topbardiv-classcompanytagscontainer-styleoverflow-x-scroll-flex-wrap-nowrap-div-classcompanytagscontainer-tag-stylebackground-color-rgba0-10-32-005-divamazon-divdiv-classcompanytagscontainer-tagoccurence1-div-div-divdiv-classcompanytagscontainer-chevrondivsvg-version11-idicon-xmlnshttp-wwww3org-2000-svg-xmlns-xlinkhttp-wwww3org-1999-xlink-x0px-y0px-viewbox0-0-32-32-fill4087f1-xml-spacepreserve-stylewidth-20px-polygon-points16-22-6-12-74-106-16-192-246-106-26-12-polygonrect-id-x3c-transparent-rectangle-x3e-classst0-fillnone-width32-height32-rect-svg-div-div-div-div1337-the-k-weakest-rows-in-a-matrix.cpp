@@ -6,7 +6,7 @@ private:
             return a.first < b.first; // Sort by the number of soldiers
         }
         return a.second < b.second; // If soldiers are equal, sort by row index
-}
+    }
 public:
     vector<int> kWeakestRows(vector<vector<int>>& mat, int k) {
         int m = mat.size();
