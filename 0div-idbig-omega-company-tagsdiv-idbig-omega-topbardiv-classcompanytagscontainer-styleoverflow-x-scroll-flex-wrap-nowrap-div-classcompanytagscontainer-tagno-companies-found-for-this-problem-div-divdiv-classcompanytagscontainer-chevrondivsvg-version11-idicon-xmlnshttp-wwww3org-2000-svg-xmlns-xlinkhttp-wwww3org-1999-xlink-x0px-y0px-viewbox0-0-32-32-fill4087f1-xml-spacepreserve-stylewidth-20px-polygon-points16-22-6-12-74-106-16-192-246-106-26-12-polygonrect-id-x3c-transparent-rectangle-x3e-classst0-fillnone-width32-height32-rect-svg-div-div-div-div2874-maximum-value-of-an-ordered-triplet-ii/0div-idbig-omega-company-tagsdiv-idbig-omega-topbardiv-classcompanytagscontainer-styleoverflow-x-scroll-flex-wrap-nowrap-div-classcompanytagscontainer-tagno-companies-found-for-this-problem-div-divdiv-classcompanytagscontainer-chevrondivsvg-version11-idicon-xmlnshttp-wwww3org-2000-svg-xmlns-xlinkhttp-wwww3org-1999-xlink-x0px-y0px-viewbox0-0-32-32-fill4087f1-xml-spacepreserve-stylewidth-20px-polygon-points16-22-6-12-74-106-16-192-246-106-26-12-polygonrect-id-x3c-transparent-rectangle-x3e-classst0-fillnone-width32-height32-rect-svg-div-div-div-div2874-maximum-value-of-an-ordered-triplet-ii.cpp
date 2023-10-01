@@ -15,7 +15,7 @@ public:
         
         for(int i = 1 ; i < n - 1 ; i++) {
             ll l = pref[i - 1], r = suff[i + 1];
-            mx = max(mx, ((ll) l - (ll)nums[i]) * (ll)r);
+            mx = max(mx, ((ll) l - (ll)nums[i]) * (ll) r);
         }
         
         return mx;
