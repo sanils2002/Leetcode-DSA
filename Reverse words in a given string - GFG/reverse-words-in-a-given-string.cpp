@@ -30,7 +30,7 @@ class Solution
         
         reverse(temp.begin(), temp.end());
         string ans = "";
-        for(int i=0;i<temp.size();i++ ) {
+        for(int i = 0 ; i < temp.size() ; i++) {
             ans += temp[i];
         }
         
